@@ -1,0 +1,51 @@
+<div class="container-home-page">
+	<div class="col-md-12">
+		<div class="background-full-box-up">&nbsp;</div>
+		<div class="background-full-box-down">&nbsp;</div>
+		<div class="login-box">
+			<div class="logo-box"><img src="../../assets/logo.png"></div>
+
+			<form [formGroup]="adminLoginForm" (ngSubmit)="onSubmit()">
+				<div class="admin123-box">
+
+					<div [ngClass]="{'has-error': ((adminLoginForm.get('email').touched ||
+				adminLoginForm.get('email').dirty) &&
+				adminLoginForm.get('email').errors)}">
+						<img src="../../assets/56.png">
+						<input type="email" formControlName="email" placeholder="admin@admin.com" id="admin123">
+						<span class="help-block" *ngIf="((adminLoginForm.get('email').touched ||
+				adminLoginForm.get('email').dirty) &&
+				adminLoginForm.get('email').errors) ">
+							<span style="color: crimson; " *ngIf="adminLoginForm.get('email').errors.email">
+								Enter Valid Email
+							</span>
+						</span>
+
+						<div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+							<div *ngIf="f.email.errors.required" style="font-size:17px; color: crimson; ">Email is
+								required
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="password-box">
+
+
+					<img src="../../assets/15.png">
+					<input type="password" formControlName="password" placeholder="123456789" id="login-password">
+
+					<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+						<div *ngIf="f.password.errors.required" style="font-size:17px; color: crimson; ">Password is
+							required
+						</div>
+					</div>
+				</div>
+				<div class="login-button-box">
+					<button class="login-button">LOGIN</button>
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+</div>

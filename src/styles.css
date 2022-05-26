@@ -1,1 +1,172 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+table.mat-table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: black;
+}
+.mat-tab-label-container {
+    display: flex;
+    flex-grow: 2;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #dfdfdf;
+}
+
+.mat-tab-label {
+
+    width:50% !important;
+  }
+
+.mat-list-item-content {
+    border-bottom: 1px solid #dfdfdf;
+    flex-grow : 12;
+}
+
+a , a:hover{
+    color : black;
+}
+
+.mat-drawer-inner-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+}
+
+/******** Even Odd rows of table ***/
+.mat-row:nth-child(even){
+    background-color:#dfdfdf;
+    }
+
+.mat-row:nth-child(odd){
+    background-color:#ffff;
+    }
+/*********************************/
+
+.mat-table thead{
+    background-color: black;
+  }
+
+.mat-header-cell{
+    color : white;
+
+}
+
+.circle-image-box {
+    text-align: center;
+    width: none;
+}
+.hamburger {
+    display: none;
+}
+
+
+.logout-box {
+    margin-top: 1px!important;
+    margin-left: 82px;}
+.mat-toolbar{
+    background-color: greenyellow;
+}
+
+button.mat-focus-indicator.mat-raised-button.mat-button-base {
+    margin-left: 8px;
+}
+.logo{
+    color: #000;
+}
+/* th.mat-header-cell.cdk-header-cell.cdk-column-action.mat-column-action.ng-star-inserted {
+    text-align: center;
+} */
+button.mat-focus-indicator.mat-raised-button.mat-button-base {
+    margin-left: 2px !important;
+    height: 33px !important;
+    line-height: 12px !important;
+    text-align: center !important;
+}
+/* .mat-form-field-underline.ng-tns-c56-22.ng-star-inserted {
+    width: 98% !important;
+    margin-left: 1% !important;
+} */
+
+@media only screen and (max-width: 600px) {
+
+    .no-of-hiring-agent-box{
+        width: 80% !important;
+    }
+    .no-of-showing-Assistant-box {
+        width: 80% !important;
+        margin-top: 7px;
+    }
+    .weak-box {
+        width: 40% !important;
+            margin-left: 18px;
+
+    }
+    .month-box {
+        width: 40% !important;
+    }
+    .year-box {
+        width: 40% !important;
+        margin-left: 18px!important;
+        margin-top: 12px;
+    }
+    .total-box {
+        width: 40% !important;
+        margin-top: 12px;
+    }
+    .logout-box {
+        margin-top: 1px !important;
+        margin-left: -32px;
+    }
+    td.mat-cell.cdk-cell.cdk-column-action.mat-column-action.ng-star-inserted {
+        text-align: center;
+    }
+    .mat-form-field-underline.ng-tns-c56-1.ng-star-inserted {
+        width: 80% !important;
+    }
+    .mat-form-field-infix.ng-tns-c56-1 {
+        width: 70% !important;
+
+    }
+    .new-user-table {
+        width: 95% !important;
+    }
+    .mat-form-field-flex.ng-tns-c56-1 {
+        width: 97%;
+    }
+
+
+input#email {
+    margin-left: 31px!important;
+}
+input#mobile {
+    margin-left: 31px!important;
+}
+button#submit-button {
+    margin-left: 50px !important;
+    float: left;
+    margin-top: 20px!important;
+}
+input#new-password {
+    margin-left: 31px!important;
+}
+input#verify-password {
+    margin-left: 31px !important;
+}
+.mat-form-field-wrapper.ng-tns-c56-16 {
+    width: 70%;
+}
+  }
+
+
+
+

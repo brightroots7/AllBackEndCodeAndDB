@@ -1,0 +1,58 @@
+<div class="filter-bar">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+  </mat-form-field>
+</div>
+
+<div style="overflow-x:auto;" class="new-user-table" matSort>
+
+  <table matTableExporter mat-table [dataSource]="dataSource" #exporter="matTableExporter" >
+
+    <ng-container matColumnDef="num">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+      <td mat-cell *matCellDef="let element; let i = index;" > {{ i + 1 }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="image">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Image </th>
+      <td mat-cell *matCellDef="let element">
+
+        <ng-container *ngIf="element.profile_img_url == 'http://3.128.96.192:3000/profile.png'; else elseTemplate">
+          <img src="../../assets/no-user-image-icon-27.jpg" class="table-img" alt="">
+        </ng-container>
+        <ng-template #elseTemplate>
+          <img src="{{element.profile_img_url}}" class="table-img" alt="">
+        </ng-template>
+
+      </td>
+      </ng-container>
+
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let element">  {{element.name}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator [length]=hiringList
+      showFirstLastButtons
+		  [pageSize]="10"
+		  [pageSizeOptions]="[5, 10, 15, 25]"
+      (page)="pageChanged($event)" matNativeControl>
+      </mat-paginator>
+
+  <button mat-raised-button (click)="exporter.exportTable('xlsx', {fileName:'showaide-hiring-agent', sheet: 'sheet_name', Props: {Author: 'showaide'}})">Excel</button>
+  <button mat-raised-button (click)="exporter.exportTable('csv')">Csv</button>
+  <button mat-raised-button (click)="exporter.exportTable('json')">Json</button>
+  <button mat-raised-button (click)="exporter.exportTable('txt')">Txt</button>
+
+</div>

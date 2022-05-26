@@ -1,0 +1,50 @@
+<div class="container-2">
+
+  <div class="text-box-profile">
+      <p>Update Profile</p>
+  </div>
+ 
+
+  <div>
+      <mat-tab-group style="float:left; margin-top:30px; width :98%;">
+          <mat-tab label="Update Profile">
+
+              <div [hidden]="spinHide" [style.background-color]="color" class="custom-toast">
+                  <div style="text-align: center;">
+                      <p>{{toastText}}</p>
+                  </div>
+              </div>
+
+              <form [formGroup]="profileForm" (ngSubmit)="updateDetails()">
+                  <div class="full-white-box-2">
+                    
+                      <div class="email-text"><label> Name </label>
+                        <input type="text" formControlName="name" placeholder="please enter name" id="email">
+                      </div>
+
+                      <div class="email-text"><label> Email </label>
+                        <input type="text" formControlName="email" placeholder="please enter a valid email address" id="email">
+                      </div>
+
+                      <div class="email-text"><label> Password </label>
+                        <input type="text" formControlName="password" placeholder="please enter password" id="email" style="margin-left: 2%;">
+                      </div>
+
+                      
+
+              
+                      <button [disabled]="!profileForm.valid" id="submit-button">SUBMIT</button>
+
+                  </div>
+
+
+              </form>
+          </mat-tab>
+         
+        
+      </mat-tab-group>
+
+  </div>
+
+
+</div>

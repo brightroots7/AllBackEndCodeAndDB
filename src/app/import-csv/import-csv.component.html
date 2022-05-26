@@ -1,0 +1,35 @@
+<div class="container-2">
+
+  <div class="text-box-profile">
+      <p> Import CSV </p>
+  </div>
+
+
+  <div>
+      <mat-tab-group style="float:left; margin-top:30px; width :98%;">
+
+
+
+          <mat-tab label="Import CSV">
+
+            <div [hidden]="spinHide" [style.background-color]="color" class="custom-toast">
+              <div style="text-align: center;">
+                  <p>{{toastText}}</p>
+              </div>
+           </div>
+
+              <div class="full-white-box-2">
+                  <div class="upload-image"><label> Upload</label>
+                      <input type="file" (change)="upload($event);" accept=".csv"
+                          placeholder="please upload csv file " id="upload-image">
+                  </div>
+                  <button id="submit-button" (click)="updateImg();">UPLOAD</button>
+              </div>
+
+          </mat-tab>
+      </mat-tab-group>
+
+  </div>
+
+
+</div>

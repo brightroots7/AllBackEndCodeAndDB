@@ -1,0 +1,60 @@
+<div class="filter-bar">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+  </mat-form-field>
+</div>
+
+<div style="overflow-x:auto;" class="new-user-table" matSort>
+
+  <table matTableExporter mat-table [dataSource]="dataSource" #exporter="matTableExporter" >
+
+    <ng-container matColumnDef="num">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+      <td mat-cell *matCellDef="let element; let i = index;" > {{ i + 1 }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+      <td mat-cell *matCellDef="let element">  {{element.originalTitle}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="directors">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Directors </th>
+      <td mat-cell *matCellDef="let element"> {{element.directors}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="authors">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Authors </th>
+      <td mat-cell *matCellDef="let element"> {{element.authors}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="content_rating">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Content Rating </th>
+      <td mat-cell *matCellDef="let element"> {{element.content_rating}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="critics_consensus">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Critics Consensus </th>
+      <td mat-cell *matCellDef="let element"> {{element.critics_consensus}} </td>
+    </ng-container>
+
+
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator [length]= hiringList
+      showFirstLastButtons
+		  [pageSize]="10"
+		  [pageSizeOptions]="[5, 10, 15, 25]"
+      (page)="pageChanged($event)" matNativeControl>
+      </mat-paginator>
+
+  <button mat-raised-button (click)="exporter.exportTable('xlsx', {fileName:'showaide-hiring-agent', sheet: 'sheet_name', Props: {Author: 'showaide'}})">Excel</button>
+  <button mat-raised-button (click)="exporter.exportTable('csv')">Csv</button>
+  <button mat-raised-button (click)="exporter.exportTable('json')">Json</button>
+  <button mat-raised-button (click)="exporter.exportTable('txt')">Txt</button>
+
+</div>

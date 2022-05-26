@@ -1,0 +1,29 @@
+.dashboard-icons {
+  padding: 0.35rem;
+  margin: 0.35rem;
+}
+
+.dashboard-icon-size {
+  font-size: 2rem;
+}
+
+.total-hiring-showing-box{float:left;width:100%;margin-top:30px;padding-top:25px;padding-bottom:25px;background-color:white;}
+.no-of-hiring-agent-box{float:left;width:45%;padding-top:20px;padding-left:20px;padding-bottom:20px;margin-left: 20px;}
+.no-of-hiring-agent-box{-webkit-box-shadow: -1px 2px 11px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 2px 11px -4px rgba(0,0,0,0.75);
+box-shadow: -1px 2px 11px -4px rgba(0,0,0,0.75);}
+.no-of-showing-Assistant-box{-webkit-box-shadow: -1px 2px 11px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 2px 11px -4px rgba(0,0,0,0.75);
+box-shadow: -1px 2px 11px -4px rgba(0,0,0,0.75);}
+.no-of-showing-Assistant-box{float:left;width:45%;padding-top:20px;padding-left:20px;padding-bottom:20px;margin-left: 20px;}
+.hiring-agent-image-left{float:left;width:20%;text-align:center;}
+.hiring-agent-image-left img{width:60%;}
+.hiring-agent-text-right{float:left;width:80%;}
+.hiring-agent-text-right p{margin-top: 6px;margin-bottom: 0px;margin-left: 20px; font-weight: 600}
+
+.showing-assistant-image-left{float:left;width:20%;text-align:center;}
+.showing-assistant-image-left img{width:50%;}
+.showing-assistant-text-right{float:left;width:80%}
+.showing-assistant-text-right p{margin-top: 6px;margin-bottom: 0px;margin-left: 20px; font-weight: 600;}
+
+

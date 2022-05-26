@@ -1,0 +1,107 @@
+.container-2{margin: auto;width:95%;}
+.full-white-box{float:left;width:40%;background-color: white;border-top: 5px solid black;}
+.image-boxx{float:left;width:100%;text-align:center;padding-top:25px;}
+.image-boxx img{width:20%;border-radius:50%;}
+.image-boxx p {margin:6px 0px 6px 0px;}
+.text-box-profile{float:left;width:100%;}
+.text-box-profile p {float:left;font-weight: 600;padding-left:20px;font-size:20px;}
+.profile-details{float:left;width:100%;margin-top:15px;margin-bottom:15px;}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+td,th {
+
+  text-align: left;
+  padding: 15px;
+	padding-left:20px;
+}
+
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+table td ul{list-style:none;padding-left: 0px;margin-top: 0px;margin-bottom: 0px;}
+	table td li{display:inline;}
+.full-white-box-2{width:100%;background-color: white;margin-top:30px;}
+.full-white-box-2 ul li{text-decoration: none;display:inline;font-size:13px;font-weight: 600;}
+.full-white-box-2  li{padding-left: 170px;}
+.full-white-box-2 ul {padding-left: 0px;margin: 20px 0px 20px 0px;}
+.old-password-text{float:left;width:100%;}
+.old-password-text label{padding-left: 35px;}
+#old-password{padding: 12px;width:75%;margin-left: 32px;color:#D8D6D6;border-color: #D8D6D6;}
+.new-password-text{float:left;width:100%;margin-top: 20px;}
+.new-password-text label{padding-left: 35px;}
+#new-password{padding: 12px;width:75%;margin-left: 25px;color:#D8D6D6;border-color: #D8D6D6;}
+.verify-password-text{float:left;width:100%;margin-top: 20px;}
+.verify-password-text label{padding-left: 35px;}
+#verify-password{padding: 12px;width:75%;margin-left: 16px;color:#D8D6D6;border-color: #D8D6D6;}
+#submit-button{ background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 35px 15px 35px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 20px 10px;
+  cursor: pointer;
+
+	border-radius:25px 25px 25px 25px;
+margin-left: 170px;}
+
+.update-profile-text{float:left;width:100%;}
+.update-profile-text label{padding-left: 35px;}
+.flex-container{
+	display : flex;
+	flex-wrap: wrap;
+}
+#admin{padding: 12px;width:75%;margin-left: 30px;color:#D8D6D6;border-color: #D8D6D6;}
+.email-text{float:left;width:100%;margin-top: 20px;}
+.email-text label{padding-left: 35px;}
+#email{padding: 12px;width:75%;margin-left: 93px;color:#D8D6D6;border-color: #D8D6D6;}
+.mobile-text{float:left;width:100%;margin-top: 20px;}
+.mobile-text label{padding-left: 35px;}
+#mobile{padding: 12px;width:75%;margin-left: 82px;color:#D8D6D6;border-color: #D8D6D6;}
+.address-text{float:left;width:100%;margin-top: 20px;}
+.address-text label{padding-left: 35px;}
+#address {padding: 12px;width:75%;margin-left: 74px;color:#D8D6D6;border-color: #D8D6D6;}
+
+.upload-image{float:left;width:100%;}
+.upload-image label{padding-left: 35px;}
+#upload-image{padding: 12px;width:75%;margin-left: 30px;color:#D8D6D6;border-color: #D8D6D6;}
+
+.custom-toast{
+	width :100%;
+	border : none;
+	/* border : 1px solid black; */
+	height : 30px;
+	padding: 9px;
+	padding-bottom : 19px;
+}
+
+@media (min-width: 320px) and (max-width: 640px)
+{
+	.nav-input-box{width:50%;}
+	#nav-input{margin: 0px;  margin-top: -25px;
+    padding-left: 20px;}
+	.nav-input-box img{width:11%; margin-left:4px;}
+	.circle-image-box{padding-left: 11px;
+    padding-top: 16px; width:20%;}
+	.circle-image-box img{width:35%;}
+	.notification-box img{width:40%; float: left;}
+	.notification-box {width:15%;     padding-left: 10px;
+    padding-top: 5px;}
+	.logout-box{width:8%;}
+	.side-bar{width:100%;}
+	.content-box-main{width:100%;}
+	.full-white-box{width:100%;}
+	.full-white-box-2 li{padding-left: 15px;}
+	#old-password{margin-left: 30px;}
+	#new-password{margin-left: 30px;}
+	#verify-password{margin-left: 30px;}
+	#submit-button{margin-left: 30px;}
+}
